@@ -86,7 +86,8 @@ header.two nav li {
 
     main {
         width: 1024px;
-        margin-left: 3%;
+        margin-left: auto;
+        text-align: center;
     }
 }
 
@@ -116,9 +117,7 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 6%;
-    }
+
 }
 
 /* 300 */
@@ -145,9 +144,7 @@ header.two nav li {
         text-transform: lowercase;
     }
 
-    main {
-        margin-left: 9%;
-    }
+
 }
 
 /* 400 */
@@ -176,9 +173,7 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 12%;
-    }
+
 }
 
 /* 500 */
@@ -205,9 +200,7 @@ header.two nav li {
         text-transform: lowercase;
     }
 
-    main {
-        margin-left: 15%;
-    }
+
 }
 
 /* 600 */
@@ -236,9 +229,6 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 18%;
-    }
 }
 
 /* 700 */
@@ -266,7 +256,7 @@ header.two nav li {
     }
 
     main {
-        margin-left: 21%;
+        margin-left: auto;
     }
 }
 
@@ -297,7 +287,7 @@ header.two nav li {
     }
 
     main {
-        margin-left: 24%;
+        margin-left: auto%;
     }
 }
 
@@ -326,7 +316,7 @@ header.two nav li {
     }
 
     main {
-        margin-left: 27%;
+        margin-left: auto;
     }
 }
 
@@ -357,7 +347,8 @@ header.two nav li {
     }
 
     main {
-        margin-left: 30%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -386,7 +377,8 @@ header.two nav li {
     }
 
     main {
-        margin-left: 33%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -417,7 +409,8 @@ header.two nav li {
     }
 
     main {
-        margin-left: 36%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -446,7 +439,8 @@ header.two nav li {
     }
 
     main {
-        margin-left: 39%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -477,7 +471,8 @@ header.two nav li {
     }
 
     main {
-        margin-left: 42%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -506,7 +501,8 @@ header.two nav li {
     }
 
     main {
-        margin-left: 45%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -537,7 +533,8 @@ header.two nav li {
     }
 
     main {
-        margin-left: 48%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -565,9 +562,7 @@ header.two nav li {
         text-transform: lowercase;
     }
 
-    main {
-        margin-left: 51%;
-    }
+
 }
 
 /* 1800 */
@@ -596,9 +591,7 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 54%;
-    }
+
 }
 
 /* 1900 */
@@ -625,9 +618,7 @@ header.two nav li {
         text-transform: lowercase;
     }
 
-    main {
-        margin-left: 57%;
-    }
+
 }
 
 /* 2000 */
@@ -656,9 +647,7 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 60%;
-    }
+
 }
 
 /* 2100 */
@@ -685,9 +674,7 @@ header.two nav li {
         text-transform: lowercase;
     }
 
-    main {
-        margin-left: 63%;
-    }
+
 }
 
 /* 2200 */
@@ -716,9 +703,7 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 66%;
-    }
+
 }
 
 /* 2300 */
@@ -745,9 +730,7 @@ header.two nav li {
         text-transform: lowercase;
     }
 
-    main {
-        margin-left: 69%;
-    }
+
 }
 
 /* 2400 */
@@ -776,9 +759,7 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 72%;
-    }
+
 }
 
 /* 2500 */
@@ -805,9 +786,7 @@ header.two nav li {
         text-transform: lowercase;
     }
 
-    main {
-        margin-left: 75%;
-    }
+
 }
 
 /* 2600 */
@@ -836,9 +815,7 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 78%;
-    }
+
 }
 
 /* 2700 */
@@ -865,9 +842,6 @@ header.two nav li {
         text-transform: lowercase;
     }
 
-    main {
-        margin-left: 81%;
-    }
 }
 
 /* 2800 */
@@ -896,9 +870,7 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 84%;
-    }
+ 
 }
 
 /* 2900 */
@@ -925,9 +897,7 @@ header.two nav li {
         text-transform: lowercase;
     }
 
-    main {
-        margin-left: 87%;
-    }
+
 }
 
 /* 3000 */
@@ -956,7 +926,4 @@ header.two nav li {
         text-transform: uppercase;
     }
 
-    main {
-        margin-left: 100%;
-    }
 }
