@@ -1,0 +1,962 @@
+/* body {
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* navigation bar */
+header.one nav a {
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+header.one nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(251, 228, 231);
+}
+
+header.one nav li {
+    padding: 10px;
+}
+
+header.two nav a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: lowercase;
+}
+
+header.two nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: lightpink;
+}
+
+header.two nav li {
+    padding: 10px;
+}
+
+/* section{
+    padding:20px 10px;
+}
+#Home{
+    background-color: gainsboro;
+}
+#About{
+    background-color: blanchedalmond;
+}
+#Contact{
+    background-color: honeydew;
+} */
+/* .is class #is id */
+
+/* 100*/
+@media (min-width:100px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        width: 1024px;
+        margin-left: 3%;
+    }
+}
+
+/* 200 */
+@media (min-width:200px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 6%;
+    }
+}
+
+/* 300 */
+@media (min-width:300px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 9%;
+    }
+}
+
+/* 400 */
+@media (min-width:400px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 12%;
+    }
+}
+
+/* 500 */
+@media (min-width:500px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 15%;
+    }
+}
+
+/* 600 */
+@media (min-width:600px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 18%;
+    }
+}
+
+/* 700 */
+@media (min-width:700px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 21%;
+    }
+}
+
+/* 800 */
+@media (min-width:800px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 24%;
+    }
+}
+
+/* 900 */
+@media (min-width:900px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 27%;
+    }
+}
+
+/* 1000 */
+@media (min-width:1024px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 30%;
+    }
+}
+
+/* 1100 */
+@media (min-width:1100px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 33%;
+    }
+}
+
+/* 1200 */
+@media (min-width:1200px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 36%;
+    }
+}
+
+/* 1300 */
+@media (min-width:1300px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 39%;
+    }
+}
+
+/* 1400 */
+@media (min-width:1400px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 42%;
+    }
+}
+
+/* 1500 */
+@media (min-width:1500px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 45%;
+    }
+}
+
+/* 1600 */
+@media (min-width:1600px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 48%;
+    }
+}
+
+/* 1700 */
+@media (min-width:1700px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 51%;
+    }
+}
+
+/* 1800 */
+@media (min-width:1800px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 54%;
+    }
+}
+
+/* 1900 */
+@media (min-width:1900px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 57%;
+    }
+}
+
+/* 2000 */
+@media (min-width:2000px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 60%;
+    }
+}
+
+/* 2100 */
+@media (min-width:2100px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 63%;
+    }
+}
+
+/* 2200 */
+@media (min-width:2200px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 66%;
+    }
+}
+
+/* 2300 */
+@media (min-width:2300px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 69%;
+    }
+}
+
+/* 2400 */
+@media (min-width:2400px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 72%;
+    }
+}
+
+/* 2500 */
+@media (min-width:2500px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 75%;
+    }
+}
+
+/* 2600 */
+@media (min-width:2600px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 78%;
+    }
+}
+
+/* 2700 */
+@media (min-width:2700px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 81%;
+    }
+}
+
+/* 2800 */
+@media (min-width:2800px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 84%;
+    }
+}
+
+/* 2900 */
+@media (min-width:2900px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-start
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-end
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    main {
+        margin-left: 87%;
+    }
+}
+
+/* 3000 */
+@media (min-width:3000px) {
+    header.one nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: lightpink;
+    }
+
+    header.two nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(251, 228, 231);
+    }
+
+    header.one nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: lowercase;
+    }
+
+    header.two nav a {
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    main {
+        margin-left: 100%;
+    }
+}
