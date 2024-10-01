@@ -25,12 +25,12 @@ body {
 
 
 h1 {
-    font-size: 10px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.6);
     animation: blink 1s infinite;
     position: fixed;
-    bottom: 530px;
-    left: 369px;
+    bottom: 620px;
+    left: 670px;
     z-index: 2;
     /* 位于方块之上 */
 }
@@ -57,13 +57,13 @@ h1 {
   } */
 
 #alarm-box {
-    width: 142px;
-    height: 153px;
+    width: 280px;
+    height: 300px;
     background-color: rgba(0, 0, 0, 0.5);
     /* 半透明黑色方块 */
     position: absolute;
-    top: 283px;
-    left: 328px;
+    top: 168px;
+    left: 600px;
     border-radius: 5px;
     opacity: 1;
     transition: opacity 1s ease-in-out;
@@ -73,92 +73,104 @@ h1 {
 }
 
 .alarm-display {
-    font-size: 8px;
+    font-size: 15px;
     font-family: 'PressStart2P', cursive;
     margin-bottom: 5px;
-    width: 140px;
-    /* 限制显示的宽度 */
+    width: 200px;
+
     word-wrap: break-word;
-    /* 自动换行 */
     white-space: normal;
-    /* 允许多行显示 */
+
     line-height: 1.2;
-    /* 调整行高 */
+
     position: fixed;
-    /* 固定位置 */
-    top: 340px;
-    /* 距离顶部 100px */
-    left: 331px;
+
+    top: 230px;
+
+    left: 630px;
     z-index: 3;
-    /* 位于方块之上 */
+
 }
 
 
 input {
-    font-size: 5px;
+    font-size: 11px;
     font-family: 'PressStart2P', cursive;
     padding: 5px;
     ;
     margin-bottom: 10px;
     position: fixed;
-    top: 390px;
-    left: 340px;
+    top: 360px;
+    left: 611px;
     border-radius: 5px;
     z-index: 2;
-    /* 位于方块之上 */
+
 }
 
 button {
-    font-size: 5px;
     font-family: 'PressStart2P', cursive;
     padding: auto;
     margin: 5px;
     cursor: pointer;
     z-index: 2;
-    /* 位于方块之上 */
-}
 
-#snoozeButton {
-    position: fixed;
-    bottom: 405px;
-    left: 330px;
-    border-radius: 5px;
-    /* 按钮的圆角 */
-    z-index: 2;
-    /* 位于方块之上 */
-}
 
-#turnOffButton {
-    position: fixed;
-    bottom: 405px;
-    right: 330px;
-    border-radius: 5px;
-    /* 按钮的圆角 */
-    z-index: 2;
-    /* 位于方块之上 */
+    #snoozeButton {
+        font-size: 10px;
+        position: fixed;
+        bottom: 405px;
+        left: 610px;
+        border-radius: 5px;
 
-}
+        z-index: 2;
 
-#aButton{
-    position: fixed; /* 或者其他你需要的定位方式 */
-    bottom: 372px;
-    right: 431px; 
-    width: 40px; /* 设置按钮的宽度 */
-    height: 18px; /* 设置按钮的高度 */
-    background-color: rgba(255, 255, 255, 0); /* 完全透明 */
-    border: none; /* 无边框 */
-    cursor: pointer; /* 鼠标悬停时显示为指针 */
-    z-index: 2; /* 确保按钮在其他元素之上 */
-}
+    }
 
-#bButton{
-    position: fixed; /* 或者其他你需要的定位方式 */
-    bottom: 372px;
-    left: 431px;
-    width: 40px; /* 设置按钮的宽度 */
-    height: 18px; /* 设置按钮的高度 */
-    background-color: rgba(255, 255, 255, 0); /* 完全透明 */
-    border: none; /* 无边框 */
-    cursor: pointer; /* 鼠标悬停时显示为指针 */
-    z-index: 2; /* 确保按钮在其他元素之上 */
-}
+    #turnOffButton {
+        font-size: 9px;
+        position: fixed;
+        bottom: 405px;
+        right: 610px;
+        border-radius: 5px;
+        z-index: 2;
+
+
+    }
+
+    #aButton {
+        position: fixed;
+        /* 或者其他你需要的定位方式 */
+        bottom: 340px;
+        left: 600px;
+        width: 56px;
+        /* 设置按钮的宽度 */
+        height: 23px;
+        /* 设置按钮的高度 */
+        background-color: rgba(255, 255, 255, 0);
+        /* 完全透明 */
+        border: none;
+        /* 无边框 */
+        cursor: pointer;
+        /* 鼠标悬停时显示为指针 */
+        z-index: 2;
+        /* 确保按钮在其他元素之上 */
+    }
+
+    #bButton {
+        position: fixed;
+        /* 或者其他你需要的定位方式 */
+        bottom: 340px;
+        right: 600px;
+        width: 56px;
+        /* 设置按钮的宽度 */
+        height: 23px;
+        /* 设置按钮的高度 */
+        background-color: rgba(255, 255, 255, 0);
+        /* 完全透明 */
+        border: none;
+        /* 无边框 */
+        cursor: pointer;
+        /* 鼠标悬停时显示为指针 */
+        z-index: 2;
+        /* 确保按钮在其他元素之上 */
+    }}
