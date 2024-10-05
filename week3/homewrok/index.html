@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>sanrio world</h1>
+        <div class="buttons">
+            <button class="circle-btn" onclick="changeImage('images/image1.jpg')" id="btn1"></button>
+            <button class="circle-btn" onclick="changeImage('images/image2.jpg')"></button>
+            <button class="circle-btn" onclick="changeImage('images/image3.jpg')"></button>
+            <button class="circle-btn" onclick="changeImage('images/image4.jpg')"></button>
+        </div>
+    </header>
+
+ <!-- Image gallery section -->
+ <section class="gallery">
+    <!-- Large display image -->
+    <div class="large-image">
+        <img id="displayedImage" src="images/image1.jpg" alt="Large Image">
+    </div>
+
+    <div class="thumbnails">
+        <img src="images/image1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage('images/image1.jpg')">
+        <img src="images/image2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage('images/image2.jpg')">
+        <img src="images/image3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage('images/image3.jpg')">
+        <img src="images/image4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage('images/image4.jpg')">
+    </div>
+
+
+</section>
+    <script src="script.js"> </script>
+</body>
+
+</html>
