@@ -1,0 +1,15 @@
+html,
+body{
+    height : 100%;
+}
+
+body, main{
+margin:0px;
+display:flex;
+
+/* 水平居中 */
+justify-content: center;
+
+/* 垂直居中 */
+align-items: center;
+}
