@@ -5,50 +5,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>homewrokweek6</title>
+    <title>Homework Week 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #2d6a4f;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3e8e65;
+        }
+
+        .content-container {
+            display: none;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .content-container.active {
+            display: block;
+        }
+
+        img {
+            width: 160%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #2d6a4f;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
 </head>
-<header>
-    <h1>Homework Week 6</h1>
-</header>
 
 <body>
-    <div class="iteration">
-        <h2>UML diagram</h2>
-        <img src="images/1.png" alt="Iteration 1">
-        <p></p>
-    </div>
+    <header>
+        <h1>Homework Week 6</h1>
+    </header>
 
-    <div class="iteration">
-        <h2>Flow chart</h2>
-        <img src="images/2.png" alt="Iteration 2">
-        <p></p>
-    </div>
-
-    <div class="iteration">
-        <h2>Reading 1</h2>1
-        <img src="images/3.png" alt="Iteration 3">
-        <p> </p>
-    </div>
-
-    <div class="iteration">
-        <h2>Reading 2</h2>
-        <img src="images/4.png" alt="Iteration 4">
-        <p></p>
+    <div class="button-container">
+        <button onclick="showContent('original')">UML diagram & Flow chart</button>
+        <button onclick="showContent('new')">Development Steps</button>
     </div>
 
 
-    <h2>Embedded Sketch</h2>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
-    <script src="sketch.js"></script>
+    <div id="original" class="content-container active">
+        <div class="iteration">
+            <h2>UML diagram</h2>
+            <img src="images/1.png" alt="Iteration 1">
+ 
+        </div>
+
+        <div class="iteration">
+            <h2>Flow chart</h2>
+            <img src="images/2.png" alt="Iteration 2">
+
+        </div>
+
+        <div class="iteration">
+            <h2>Reading 1</h2>
+            <img src="images/3.png" alt="Iteration 3">
+    
+        </div>
+
+        <div class="iteration">
+            <h2>Reading 2</h2>
+            <img src="images/4.png" alt="Iteration 4">
+    
+        </div>
+
+    </div>
+
+    <div id="new" class="content-container">
+        <section id="step-1">
+            <h2>Step 1: Load and Display Tree Image as Background</h2>
+            <p><strong>Process:</strong> I wanted to load a tree image as the background and display it centered on the canvas. Using the <code>preload</code> function, I loaded the image and displayed it with <code>image</code> in the <code>draw</code> function. However, the tree image was too large and exceeded the canvas size.</p>
+            <p><strong>Problem:</strong> The tree image was larger than the canvas, causing it to be cropped.</p>
+            <p><strong>Solution:</strong> I resized the image to 400x400 pixels and adjusted its position to center it within the canvas.</p>
+            <img src="images/step1.png" alt="Step 1 jpg showing the tree image as background">
+        </section>
+    
+        <section id="step-2">
+            <h2>Step 2: Add Apples</h2>
+            <p><strong>Process:</strong> I implemented functionality to generate apples at random positions on the canvas when the mouse was clicked. Each apple was represented by a simple ellipse, and their positions were stored in an array. The apples were drawn inside the <code>draw</code> function.</p>
+            <p><strong>Problem:</strong> Some apples were overlapping when generated, creating a cluttered appearance.</p>
+            <p><strong>Solution:</strong> I noted the overlap issue and decided to address it in the next step by ensuring no two apples overlapped.</p>
+            <img src="images/step2.mov" alt="Step 2 mov showing apples being added">
+        </section>
+    
+        <!-- Adding New Steps Here -->
+        <section id="step-3">
+            <h2>Step 3: Resolve Overlapping Apples</h2>
+            <p><strong>Process:</strong> To avoid overlapping apples, I introduced a <code>do-while</code> loop that checked the distance between the new apple and all existing apples. If the distance was less than 30 pixels, I regenerated the position until there was no overlap.</p>
+            <p><strong>Problem:</strong> When the canvas became crowded, the loop struggled to find a valid position, potentially causing performance issues.</p>
+            <p><strong>Solution:</strong> I added a maximum number of apples (<code>MAX_APPLES</code>) to limit the number of apples that could be generated, ensuring there was enough space on the canvas.</p>
+            <img src="images/step3.mov" alt="Step 3 mov showing non-overlapping apples">
+        </section>
+    
+        <section id="step-4">
+            <h2>Step 4: Add a Maturity Slider</h2>
+            <p><strong>Process:</strong> To enable dynamic changes in apple appearance, I added a slider to represent apple maturity. The slider values ranged from 0 to 1, starting at 0. I planned to use this value to control apple behavior in the next steps.</p>
+            <p><strong>Problem:</strong> The slider was successfully added to the canvas, but at this stage, it had no effect on the apples.</p>
+            <p><strong>Solution:</strong> I moved on to implement a connection between the slider value and apple appearance in the following step.</p>
+            <img src="images/step4.mov" alt="Step 4 mov showing the maturity slider">
+        </section>
+    
+        <section id="step-5">
+            <h2>Step 5: Implement Apple Color Gradient</h2>
+            <p><strong>Process:</strong> Using the slider value, I implemented a color gradient for the apples that transitioned from green to red. The <code>map</code> function was used to calculate RGB values based on the slider position. The apples' colors now dynamically changed in real time as the slider was moved.</p>
+            <p><strong>Problem:</strong> The logic for the color gradient was functional but made the code lengthy and repetitive.</p>
+            <p><strong>Solution:</strong> I encapsulated the gradient logic into a <code>drawApple</code> function, making the code modular and easier to maintain.</p>
+            <img src="images/step5.MOV" alt="Step 5 mov showing color gradient effect">
+        </section>
+    
+        <section id="step-6">
+            <h2>Step 6: Make Apples Fall</h2>
+            <p><strong>Process:</strong> I added functionality for apples to fall from the tree when the slider reached its maximum value (1). Each apple was given an <code>isFalling</code> property, and its <code>y</code> coordinate was updated to simulate falling.</p>
+            <p><strong>Problem:</strong> Initially, apples fell too quickly, reaching the ground instantly. Additionally, apples continued falling through the ground.</p>
+            <p><strong>Solution:</strong> I introduced random fall speeds for the apples and set a ground level (<code>GROUND_Y</code>). Once an apple's <code>y</code> position exceeded this ground level, it stopped falling.</p>
+            <img src="images/step6.MOV" alt="Step 6 mov showing apples falling">
+          </section>
+          
+          <section id="step-7">
+            <h2>Step 7: Limit Apple Falling</h2>
+            <p><strong>Process:</strong> To ensure apples stopped falling once they hit the ground, I added a condition to reset their position to the ground level and marked their <code>isFalling</code> property as <code>false</code>.</p>
+            <p><strong>Problem:</strong> Without resetting the <code>isFalling</code> property, some apples incorrectly continued trying to fall, even though they had already reached the ground.</p>
+            <p><strong>Solution:</strong> I explicitly set <code>isFalling</code> to <code>false</code> for any apple that reached the ground, resolving the logic error.</p>
+            <img src="images/step7.MOV" alt="Step 7 mov showing apples stopping at the ground">
+          </section>
+          
+          <section id="step-8">
+            <h2>Step 8: Add Pac-Man Character and Movement</h2>
+            <p><strong>Process:</strong> I added a Pac-Man character that moved from the left to the right of the canvas, simulating eating apples on the ground. When Pac-Man's position overlapped with an apple's, the apple was removed from the array.</p>
+            <p><strong>Problem:</strong> The collision detection was initially too strict, causing some apples to be missed.</p>
+            <p><strong>Solution:</strong> I adjusted the collision detection range, comparing Pac-Man's <code>x</code> coordinate with the apple's center position to ensure smoother and more accurate interactions.</p>
+            <img src="images/step8.MOV" alt="Step 8 mov showing Pac-Man eating apples">
+          </section>
+          
+          <section id="step-9">
+            <h2>Step 9: Add Mouth Animation for Pac-Man</h2>
+            <p><strong>Process:</strong> To make Pac-Man more dynamic, I added an opening and closing mouth animation. Using a frame counter (<code>mouthFrameCount</code>), I toggled the mouth state every 10 frames.</p>
+            <p><strong>Problem:</strong> Initially, the mouth animation switched too quickly, making it look unnatural.</p>
+            <p><strong>Solution:</strong> I adjusted the toggle interval to every 10 frames and reset the frame counter when Pac-Man was reset, ensuring the animation started consistently each time.</p>
+            <img src="images/step9.MOV" alt="Step 9 mov showing Pac-Man's mouth animation">
+          </section>
+          
+          <section id="step-10">
+            <h2>Step 10: Implement Reset Logic</h2>
+            <p><strong>Process:</strong> I implemented a reset function to restore the game to its initial state after Pac-Man moved off the screen. This reset cleared all apples, reset the slider value, and returned Pac-Man to its starting position.</p>
+            <p><strong>Problem:</strong> Occasionally, the apple array wasn't cleared properly during the reset, leaving leftover apples in the game.</p>
+            <p><strong>Solution:</strong> I explicitly cleared the apple array and reset all relevant game states, ensuring that the slider, Pac-Man, and apples returned to their initial states. This created a seamless game loop.</p>
+            <img src="images/step10.MOV" alt="Step 10 GIF showing the reset functionality">
+          </section>
+    </div>
+    
+
+    <script>
+        // Function to switch between content sections
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.content-container');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        // Ensure the "original" content is loaded on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            showContent('original');
+        });
+    </script>
 </body>
-<style>
-    img {
-        width: 80%;
-        /* 图片宽度是页面宽度的80% */
-        height: auto;
-        /* 自动调整高度 */
-        border: 1px solid #ccc;
-    }
-</style>
 
 </html>
