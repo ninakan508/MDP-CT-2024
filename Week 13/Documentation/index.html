@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Instrument Construction Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #5b8c85;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1::after {
+            content: " Week 13-14 Homework";
+            font-size: 0.8em;
+            display: block;
+            margin-top: 5px;
+            color: #ddd;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #5b8c85;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .placeholder {
+            background-color: #ddd;
+            border: 1px dashed #999;
+            border-radius: 8px;
+            height: 200px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        .placeholder img {
+            max-width: 100%;
+            height: auto;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Arduino Instrument Construction Guide</h1>
+</header>
+
+<main>
+    <section>
+        <h2>1. Circuit Connection</h2>
+        <h3>Button Connection</h3>
+        <ul>
+            <li>Connect one terminal of the button to <strong>Arduino PIN 13</strong>.</li>
+            <li>Connect the other terminal to <strong>GND</strong>.</li>
+            <li>Place a <strong>10kΩ pull-down resistor</strong> between <strong>PIN 13</strong> and <strong>GND</strong> to prevent floating signals.</li>
+        </ul>
+        <h3>Photoresistor (LDR) Connection</h3>
+        <ul>
+            <li>Connect one terminal of the LDR to <strong>5V</strong>.</li>
+            <li>Connect the other terminal to <strong>A3 PIN</strong> and one side of a <strong>10kΩ resistor</strong>.</li>
+            <li>Connect the other side of the resistor to <strong>GND</strong>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Steps to Build the Instrument</h2>
+        <h3>Step 1: Design and Test the Circuit</h3>
+        <ul>
+            <li>Follow the circuit connection instructions and assemble the components on a breadboard.</li>
+            <li>Upload the Arduino code and use the Serial Monitor to verify the button and photoresistor readings.</li>
+        </ul>
+
+        <h3>Step 2: Prepare the Paper Box</h3>
+        <ul>
+            <li>Choose a sturdy paper box that can house the Arduino and sensors.</li>
+            <li>Cut a hole on the top for the LDR to sense light from outside.</li>
+            <li>Cut another hole on the side for the button, ensuring it’s easy to press.</li>
+            <li>Create a small slot at the bottom for the USB cable to connect the Arduino to your computer.</li>
+        </ul>
+
+        <h3>Step 3: Assemble the Instrument</h3>
+        <ul>
+            <li>Mount the photoresistor through the top hole and secure it with tape or hot glue.</li>
+            <li>Install the button through the side hole and fix it firmly.</li>
+            <li>Route the wires from the sensors into the box and connect them to the corresponding Arduino pins.</li>
+            <li>Place the Arduino inside the box and secure it with tape or adhesive to keep it stable.</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2>3. Build Gallery</h2>
+        <div class="gallery">
+            <img src="Images/Step1.png" alt="Image for Build Steps">
+            <img src="Images/Step2.png" alt="Image for Build Steps">
+            <img src="Images/Step3.png" alt="Image for Build Steps">
+            <img src="Images/Step4.png" alt="Image for Build Steps">
+            <img src="Images/Step5.png" alt="Image for Build Steps">
+        </div>
+        <video controls>
+            <source src="Images/steps.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <h2>4. Final Demonstration Video</h2>
+        <video controls>
+            <source src="Images/FinalDemonstration.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+</main>
+
+</body>
+</html>
