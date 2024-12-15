@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Homework Week 8-9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #2d6a4f;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3e8e65;
+        }
+
+        .content-container {
+            display: none;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .content-container.active {
+            display: block;
+        }
+
+        img {
+            width: 160%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #2d6a4f;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Homework Week 8-9</h1>
+    </header>
+
+    <div class="button-container">
+        <button onclick="showContent('original')">UML diagram & Ideation(week 8)</button>
+        <button onclick="showContent('new')">Development Steps(week 9)</button>
+    </div>
+
+
+    <div id="original" class="content-container active">
+        <div class="iteration">
+            <h2>UML diagram</h2>
+            <img src="images/UML_Diagram.png" alt="Iteration 1">
+ 
+        </div>
+
+        <div class="Ideation">
+            <h2>Ideation</h2>
+            <p>My project draws inspiration from the iconic games Doodle Jump and Flappy Bird. Both focus on dynamic motion and player interaction. I created a gesture-controlled prototype where players draw lines with hand gestures to act as temporary platforms for a bouncing ball. These platforms disappear after a short time, requiring players to strategize and react quickly to keep the ball moving. By combining gesture recognition with physics-based mechanics, this project transforms traditional gameplay into an engaging and creative experience, making interaction more immersive and fun.</p>
+        </div>
+
+
+
+    </div>
+
+    <div id="new" class="content-container">
+        <section id="step-1">
+            <h2>Step 1: Initialize Canvas and Basic Interface</h2>
+            <p><strong>Description:</strong></p>
+            <ul>
+                <li>I created a 640x480 canvas and added a ground (<code>groundY</code>) to serve as the base for the game.</li>
+                <li>The player's basic position and gravity variables were initialized.</li>
+                <li>Introduced live video as the background, but hand gesture detection was not yet integrated.</li>
+            </ul>
+            <img src="images/step1.MOV" alt="Step 1">
+        </section>
+    
+        <section id="step-2">
+            <h2>Step 2: Add Line Class and Basic Drawing Functionality</h2>
+            <p><strong>Description:</strong></p>
+            <ul>
+                <li>I introduced the <code>drawingLine</code> class to manage user-drawn lines and added mouse interaction for drawing.</li>
+                <li>Users can draw lines on the canvas by dragging the mouse, with all lines stored in the <code>lines</code> array and displayed in real-time.</li>
+            </ul>
+            <img src="images/step2.MOV" alt="Step 2 ">
+        </section>
+    
+        <section id="step-3">
+            <h2>Step 3: Add Line Lifecycle Management</h2>
+            <p><strong>Description:</strong></p>
+            <ul>
+                <li>I added lifecycle management to the <code>drawingLine</code> class so that lines start a timer upon release and are removed from the canvas after 2 seconds.</li>
+                <li>Introduced <code>released</code> and <code>releaseTime</code> properties to manage line release and removal via the <code>mouseReleased()</code> and <code>life()</code> methods.</li>
+            </ul>
+            <img src="images/step3.MOV" alt="Step 3">
+        </section>
+    
+        <section id="step-4">
+            <h2>Step 4: Add Player and Ground Collision Logic</h2>
+            <p><strong>Description:</strong></p>
+            <ul>
+                <li>I implemented physical collision logic for the player (ball) and the ground. The player bounces when it hits the ground and is affected by gravity.</li>
+                <li>The player's horizontal velocity is randomly initialized and reverses upon hitting canvas boundaries.</li>
+            </ul>
+            <img src="images/step4.MOV" alt="Step 4">
+        </section>
+    
+        <section id="step-5">
+            <h2>Step 5: Split Code into Separate Files</h2>
+            <p><strong>Description:</strong></p>
+            <ul>
+                <li>Without changing any previous functionality, I split the code into three separate files for better modularity:</li>
+                <li><code>sketch.js</code>: Manages the main logic, including initialization, the main loop, and global management.</li>
+                <li><code>Player.js</code>: Defines the behavior of the player (ball), including position updates, display, collision detection, and bouncing logic.</li>
+                <li><code>drawingLine.js</code>: Handles line drawing, adding points, lifecycle management, and display.</li>
+            </ul>
+            <img src="images/step5.png" alt="Step 5 ">
+        </section>
+    
+        <section id="step-6">
+            <h2>Step 6: Introduce Hand Gesture Recognition</h2>
+            <p><strong>Description:</strong></p>
+            <ul>
+                <li>I integrated the Handpose model from ml5.js for hand gesture detection via the webcam.</li>
+                <li>Detected the positions of the index finger and thumb to determine whether the user is performing a "pinch" gesture.</li>
+                <li>Adjusted the gesture's X coordinates (flipped as width - x) to align with the mirrored video.</li>
+            </ul>
+            <img src="images/step6.MOV" alt="Step 6 ">
+          </section>
+          
+        <section id="step-7">
+            <h2>Step 7: Control Line Drawing with Hand Gestures</h2>
+            <p><strong>Description:</strong></p>
+            <ul>
+                <li>Users can control line drawing using the "pinch" gesture, replacing mouse interaction.</li>
+                <li>Implemented logic to start, continue, and release lines based on the position of the index finger, synced with the live video.</li>
+            </ul>
+            <img src="images/step7.png" alt="Step 7 ">
+        </section>
+
+        <section id="step-8">
+            <h2>Step 8: Add Player and Line Interaction</h2>
+            <p><strong>Description:</strong></p>
+            <ul>
+                <li>I implemented physical interactions between the player (ball) and the drawn lines using the nearest-point algorithm to calculate the closest distance between the player and a line segment.</li>
+                <li>When the player collides with a line, it reflects based on the collision point's normal vector, simulating realistic physical effects.</li>
+                <li>The player's speed slightly decreases upon bouncing to enhance realism.</li>
+            </ul>
+            <img src="images/step8.mov" alt="Step 8">
+        </section>
+
+    </div>
+    <section id="view-project" class="content-container"></section>
+        <h2>View the Full Project</h2>
+        <p>You can view the full project and interact with it using the following link:</p>
+        <a href="https://editor.p5js.org/ninakan508/sketches/3MrPH_7Db" target="_blank">View Project on p5.js Editor</a>
+    </section>
+
+    <script>
+        // Function to switch between content sections
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.content-container');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        // Ensure the "original" content is loaded on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            showContent('original');
+        });
+    </script>
+</body>
+
+</html>
