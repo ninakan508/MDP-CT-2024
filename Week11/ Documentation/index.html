@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Button and Flex Sensor Project</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #ff69b4;
+            text-align: center;
+        }
+        ul, ol {
+            background-color: #fff0f5;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul ul, ol ol {
+            background-color: #ffe4e1;
+        }
+        .video-section, .process-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .process-section img {
+            border: 5px solid #ff69b4;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .video-section video {
+            border: 5px solid #ff69b4;
+            border-radius: 10px;
+        }
+        p {
+            background-color: #fff0f5;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ol {
+            counter-reset: item;
+        }
+        ol li {
+            display: block;
+            margin-bottom: 10px;
+        }
+        ol li:before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            color: #ff69b4;
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arduino Button and Flex Sensor Project</h1>
+
+    <h2>Functionality Overview</h2>
+    <p>This project uses an Arduino to control background color and a circle's size based on input from a button and a flex sensor:</p>
+    <ul>
+        <li><strong>Button:</strong> Controls the background color.
+            <ul>
+                <li>When pressed, the background turns blue.</li>
+                <li>When released, the background turns black.</li>
+            </ul>
+        </li>
+        <li><strong>Flex Sensor:</strong> Controls the size of a circle.
+            <ul>
+                <li>The circle's radius dynamically adjusts based on the flex sensor's bend, mapping its values from 0 to half the canvas width.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Hardware Connections</h2>
+    <h3>Button:</h3>
+    <ul>
+        <li>Connect one pin to digital pin 13 on the Arduino.</li>
+        <li>Connect the other pin to GND.</li>
+        <li>Use a 10kΩ pull-down resistor between pin 13 and VCC.</li>
+    </ul>
+    <h3>Flex Sensor:</h3>
+    <ul>
+        <li>Connect one end to analog pin A0 on the Arduino.</li>
+        <li>Connect the other end to GND.</li>
+        <li>Add a 10kΩ resistor between A0 and VCC to create a voltage divider circuit.</li>
+    </ul>
+
+    <h2>Project Demonstration</h2>
+    <p>Below is a demonstration video showcasing the functionality:</p>
+    <div class="video-section">
+        <video controls width="600">
+            <source src="images/process_video.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <h2>Process Documentation</h2>
+    <p>Here are some pictures and videos documenting the process of setting up the Arduino board and connecting the components:</p>
+    
+    <div class="process-section">
+        <h3>Arduino Board Setup</h3>
+        <img src="images/arduino_setup1.HEIC" alt="Arduino Board Setup" width="600">
+        <img src="images/arduino_setup2.HEIC" alt="Arduino Board Setup" width="600">
+    </div>
+    
+    <div class="process-section">
+        <h3>Connecting the Components</h3>
+        <img src="Images/component_connections.HEIC" alt="Connecting the Components" width="600">
+    </div>
+    
+    <div class="process-section">
+        <h3>Code Snippet 1</h3>
+        <img src="Images/code_snippet1.png" alt="Code Snippet 1" width="600">
+    </div>
+
+    <div class="process-section">
+        <h3>Code Snippet 2</h3>
+        <img src="Images/code_snippet2.png" alt="Code Snippet 2" width="600">
+    </div>
+
+    <div class="process-section">
+        <h3>Code Snippet 3</h3>
+        <img src="Images/code_snippet2.png" alt="Code Snippet 3" width="600">
+    </div>
+
+    <h2>Connection Steps</h2>
+    <ol>
+        <li>Connect the button to digital pin 13 and GND on the Arduino. When pressed, pin 13 reads <strong>HIGH</strong>, and when released, it reads <strong>LOW</strong>.</li>
+        <li>Connect one end of the flex sensor to analog pin A0 and the other end to GND. Use a voltage divider circuit to read the bending values.</li>
+        <li>Connect the Arduino to a computer using a USB cable.</li>
+    </ol>
+
+    <h2>Connection Diagram</h2>
+    <img src="Images/output.png" alt="Connection Diagram" width="600">
+</body>
+</html>
