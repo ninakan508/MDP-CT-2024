@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circuit Defender</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_project3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body>
+
+<div class="project-page">
+
+    <div class="banner" data-aos="fade-up">
+        <img src="images/banner_placeholder.png" alt="Circuit Defender Banner">
+    </div>
+
+    <div class="quick-info" data-aos="fade-up">
+        <h1>Circuit Defender</h1>
+        <p class="info-line">Genre: Reaction Game | Tags: Action, Fast-Paced, Arduino-Based | Release: 2025</p>
+    </div>
+
+    <section data-aos="fade-up">
+        <h2>About the Game</h2>
+        <p class="description">
+            In the ArtCenter Making Lab, an Arduino board faces a critical Bug invasion. As the last system maintainer, you must eliminate the Bugs to defend the system components!
+        </p>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2>Gameplay</h2>
+        <p class="description">
+            <strong>Objective:</strong> Eliminate Bugs quickly and protect critical system modules.<br>
+            <strong>Mechanics:</strong>
+            <ul>
+                <li>Precision shooting at Bugs</li>
+                <li>Avoid hitting system components (costs life)</li>
+                <li>Increasing difficulty over time</li>
+            </ul>
+        </p>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2>Development Gallery</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="images/early_stage_cylinder_bug.png" class="glightbox" data-gallery="gallery1">
+                        <img src="images/early_stage_cylinder_bug.png" alt="Early Cylinder Bug Version">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="images/bug_and_component_models.png" class="glightbox" data-gallery="gallery1">
+                        <img src="images/bug_and_component_models.png" alt="Bug and Component Models">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="images/code_fail_1.png" class="glightbox" data-gallery="gallery1">
+                        <img src="images/code_fail_1.png" alt="Code Failure 1">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="images/code_fail_2.png" class="glightbox" data-gallery="gallery1">
+                        <img src="images/code_fail_2.png" alt="Code Failure 2">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="images/code_success_1.png" class="glightbox" data-gallery="gallery1">
+                        <img src="images/code_success_1.png" alt="Code Success 1">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="images/code_success_2.png" class="glightbox" data-gallery="gallery1">
+                        <img src="images/code_success_2.png" alt="Code Success 2">
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2>Controller Build</h2>
+        <div class="gallery">
+            <a href="images/controller_arduino_build.png" class="glightbox" data-gallery="gallery2">
+                <img src="images/controller_arduino_build.png" alt="Arduino Controller Building">
+            </a>
+            <a href="images/controller_final.png" class="glightbox" data-gallery="gallery2">
+                <img src="images/controller_final.png" alt="Completed Controller">
+            </a>
+        </div>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2>Playthrough Video</h2>
+        <a href="videos/final_playthrough.mp4" class="glightbox">
+            <img src="images/video_cover_placeholder.png" alt="Playthrough Video" class="video-cover">
+        </a>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2>Player Feedback</h2>
+        <div class="feedback-section">
+            <div class="feedback-bubble">
+                <p><strong>Player A:</strong> "Challenging yet satisfying! Controller gives a great tactile feel."</p>
+            </div>
+            <div class="feedback-bubble">
+                <p><strong>Player B:</strong> "The bugs move just fast enough to keep me stressed but excited!"</p>
+            </div>
+            <div class="feedback-bubble">
+                <p><strong>Player C:</strong> "Would love more bug variations, but overall really fun!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2>Reflection & Future Plans</h2>
+        <p class="description">
+            Circuit Defender taught me the power of tight iteration cycles and the value of simple but polished interactions. Future updates could include new bug types, power-ups, and co-op modes.
+        </p>
+    </section>
+
+    <button id="homeButton" onclick="goHome()">← Back to Home</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
+
+    AOS.init();
+</script>
+
+</body>
+</html>
