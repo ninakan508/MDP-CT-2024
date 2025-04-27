@@ -170,3 +170,23 @@ footer {
     margin-bottom: 10px;
     font-size: 0.95em;
 }
+.back-button-container {
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    padding: 0 20px;
+}
+
+.back-button {
+    background-color: #2a475e;
+    color: #66c0f4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #3b6a89;
+}
