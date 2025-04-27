@@ -2,150 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Circuit Defender</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Defender - Steam Style Page</title>
     <link rel="stylesheet" href="style_project3.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
 
-<div class="project-page">
-
-    <div class="banner" data-aos="fade-up">
-        <img src="images/banner_placeholder.png" alt="Circuit Defender Banner">
-    </div>
-
-    <div class="quick-info" data-aos="fade-up">
-        <h1>Circuit Defender</h1>
-        <p class="info-line">Genre: Reaction Game | Tags: Action, Fast-Paced, Arduino-Based | Release: 2025</p>
-    </div>
-
-    <section data-aos="fade-up">
-        <h2>About the Game</h2>
-        <p class="description">
-            In the ArtCenter Making Lab, an Arduino board faces a critical Bug invasion. As the last system maintainer, you must eliminate the Bugs to defend the system components!
-        </p>
-    </section>
-
-    <section data-aos="fade-up">
-        <h2>Gameplay</h2>
-        <p class="description">
-            <strong>Objective:</strong> Eliminate Bugs quickly and protect critical system modules.<br>
-            <strong>Mechanics:</strong>
-            <ul>
-                <li>Precision shooting at Bugs</li>
-                <li>Avoid hitting system components (costs life)</li>
-                <li>Increasing difficulty over time</li>
-            </ul>
-        </p>
-    </section>
-
-    <section data-aos="fade-up">
-        <h2>Development Gallery</h2>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="images/early_stage_cylinder_bug.png" class="glightbox" data-gallery="gallery1">
-                        <img src="images/early_stage_cylinder_bug.png" alt="Early Cylinder Bug Version">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="images/bug_and_component_models.png" class="glightbox" data-gallery="gallery1">
-                        <img src="images/bug_and_component_models.png" alt="Bug and Component Models">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="images/code_fail_1.png" class="glightbox" data-gallery="gallery1">
-                        <img src="images/code_fail_1.png" alt="Code Failure 1">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="images/code_fail_2.png" class="glightbox" data-gallery="gallery1">
-                        <img src="images/code_fail_2.png" alt="Code Failure 2">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="images/code_success_1.png" class="glightbox" data-gallery="gallery1">
-                        <img src="images/code_success_1.png" alt="Code Success 1">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="images/code_success_2.png" class="glightbox" data-gallery="gallery1">
-                        <img src="images/code_success_2.png" alt="Code Success 2">
-                    </a>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
+    <header>
+        <div class="header-content">
+            <h1>Circuit Defender</h1>
         </div>
-    </section>
+    </header>
 
-    <section data-aos="fade-up">
-        <h2>Controller Build</h2>
-        <div class="gallery">
-            <a href="images/controller_arduino_build.png" class="glightbox" data-gallery="gallery2">
-                <img src="images/controller_arduino_build.png" alt="Arduino Controller Building">
-            </a>
-            <a href="images/controller_final.png" class="glightbox" data-gallery="gallery2">
-                <img src="images/controller_final.png" alt="Completed Controller">
-            </a>
+    <main>
+        <div class="content-wrapper">
+
+            <!-- 左边：Gallery区 -->
+            <div class="left-panel">
+                <div class="main-image" id="main-media">
+                    <img id="current-image" src="images/gameplay1.mov" alt="Main Media">
+                </div>
+                <div class="thumbnail-gallery">
+                    <img src="images/gameplay_thumbnail.jpg" class="thumb" data-video="images/gameplay1.mov" title="Gameplay Recording 1">
+                    <img src="images/gameplay_thumbnail2.jpg" class="thumb" data-video="images/gameplay2.mov" title="Gameplay Recording 2">
+                    <img src="images/screenshot_early_bug.png" class="thumb active" title="Early Prototype (Cylindrical Bug)">
+                    <img src="images/screenshot_bug_model.png" class="thumb" title="Bug Model Final">
+                    <img src="images/screenshot_component.png" class="thumb" title="Component Module Screenshot">
+                    <img src="images/code_fail1.png" class="thumb" title="Code Development - Early Failure 1">
+                    <img src="images/code_fail2.png" class="thumb" title="Code Development - Early Failure 2">
+                    <img src="images/code_success1.JPG" class="thumb" title="Code Development - Final Version 1">
+                    <img src="images/code_success2.png" class="thumb" title="Code Development - Final Version 2">
+                    <img src="images/arduino_build.jpg" class="thumb" title="Arduino Controller Build">
+                    <img src="images/arduino_final.jpg" class="thumb" title="Arduino Controller Completed">
+                </div>
+                
+            </div>
+
+            <!-- 右边：信息区 -->
+            <div class="right-panel">
+                <div class="game-info-card">
+                    <p class="tagline">
+                        Defend the core systems from an unexpected Bug invasion! Test your reflexes and precision in Circuit Defender, a fast-paced reaction game set in the ArtCenter Making Lab.
+                    </p>
+                    <button class="play-button">Play Game</button>
+
+                    <ul class="info-list">
+                        <li><strong>Developer:</strong> Nina Kan</li>
+                        <li><strong>Publisher:</strong> Nina Kan</li>
+                        <li><strong>Release Date:</strong> Apr 2025</li>
+                        <li><strong>Genre:</strong> Reaction, Arcade</li>
+                        <li><strong>Tags:</strong> Fast-paced, Reflexes, Minimalist, Arcade, Indie</li>
+                    </ul>
+                    <div class="media-description">
+                        <h3>Current Media:</h3>
+                        <p id="media-description-text">Early Prototype (Cylindrical Bug)</p>
+                    </div>
+            
+                </div>
+                <div class="game-rules-card">
+                    <h3>Game Rules</h3>
+                    <ul class="rules-list">
+                        <li>✅ Hit Bugs to score <strong>+1 point</strong>.</li>
+                        <li>❌ Hitting system components costs <strong>-1 life</strong>.</li>
+                        <li>❤️ You have <strong>3 lives</strong> in total.</li>
+                        <li>🏁 Lose all lives and the game ends.</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-    </section>
 
-    <section data-aos="fade-up">
-        <h2>Playthrough Video</h2>
-        <a href="videos/final_playthrough.mp4" class="glightbox">
-            <img src="images/video_cover_placeholder.png" alt="Playthrough Video" class="video-cover">
-        </a>
-    </section>
+        <!-- 下方 About This Game -->
+        <section class="game-about">
+            <h2>About This Game</h2>
+            <p>
+                Deep within the ArtCenter Making Lab, a lone Arduino board has fallen prey to a mysterious Bug invasion. As the lab's last standing system defender, you must swiftly eliminate rogue Bugs while safeguarding essential components vital to system stability.
+            </p>
+            <p>
+                Circuit Defender challenges your reflexes and decision-making under pressure. Strike fast to score points — but be cautious: damaging core modules will destabilize the system and cost you precious lives.
+            </p>
+            <p>
+                Featuring minimalist visuals of real-world prototypes, from early cylindrical placeholders to finalized models, Circuit Defender brings a blend of physical crafting and digital gameplay to life.
+            </p>
+        </section>
 
-    <section data-aos="fade-up">
-        <h2>Player Feedback</h2>
-        <div class="feedback-section">
-            <div class="feedback-bubble">
-                <p><strong>Player A:</strong> "Challenging yet satisfying! Controller gives a great tactile feel."</p>
-            </div>
-            <div class="feedback-bubble">
-                <p><strong>Player B:</strong> "The bugs move just fast enough to keep me stressed but excited!"</p>
-            </div>
-            <div class="feedback-bubble">
-                <p><strong>Player C:</strong> "Would love more bug variations, but overall really fun!"</p>
-            </div>
-        </div>
-    </section>
 
-    <section data-aos="fade-up">
-        <h2>Reflection & Future Plans</h2>
-        <p class="description">
-            Circuit Defender taught me the power of tight iteration cycles and the value of simple but polished interactions. Future updates could include new bug types, power-ups, and co-op modes.
-        </p>
-    </section>
+          <!-- Development Journey -->
+         <section class="game-section">
+             <h2>Development Journey</h2>
+             <p>
+             Circuit Defender began as a simple prototype using cylindrical placeholders to represent Bugs. 
+             Through multiple iterations, including early coding failures and eventual breakthroughs, the game evolved into a fully functional reaction-based experience. 
+             Screenshots of the early prototypes, failed code versions, and successful builds capture this creative process.
+            </p>
+         </section>
 
-    <button id="homeButton" onclick="goHome()">← Back to Home</button>
 
-</div>
+        <!-- Reviews区 -->
+        <section class="game-reviews">
+            <h2>Reviews</h2>
+            <blockquote>
+                "Fast, fun, and surprisingly tense! Protecting the modules while hunting Bugs really gets your heart racing."
+            </blockquote>
+            <blockquote>
+                "The custom controller feels intuitive and adds a tactile satisfaction to smashing Bugs."
+            </blockquote>
+            <blockquote>
+                "Losing lives by mistake makes every shot matter — a simple concept executed very well!"
+            </blockquote>
+        </section>
+    </main>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="script.js"></script>
-<script>
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
+    <footer>
+        <p>&copy; 2025 Circuit Defender by Nina Kan</p>
+    </footer>
 
-    const lightbox = GLightbox({
-        selector: '.glightbox'
-    });
-
-    AOS.init();
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
