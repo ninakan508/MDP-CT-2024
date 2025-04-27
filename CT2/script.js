@@ -48,3 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Launching Circuit Defender... 🚀');
     });
 });
+window.onload = function() {
+    const mainVideo = document.getElementById('current-video');
+    mainVideo.load();
+    mainVideo.play();
+};
