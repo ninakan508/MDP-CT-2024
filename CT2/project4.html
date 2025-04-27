@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Digital Materiality</title>
+    <link rel="stylesheet" href="style_project4.css">
+</head>
+<body>
+
+<header>
+    <h1>Exploring Digital Materiality</h1>
+</header>
+<div class="back-button-container">
+    <button class="back-button" onclick="window.location.href='index.html'">← Back to Home</button>
+</div>
+<main>
+    <!-- 顶部：大视频和描述 -->
+    <div class="main-section">
+        <div class="main-video-container">
+            <video id="main-video" src="videos/artifact1.mp4" controls autoplay muted></video>
+        </div>
+        <div class="description-container">
+            <h2 id="artifact-title">Artifact #1</h2>
+            <p id="artifact-description">
+                This artifact was created by following a full tutorial workflow in TouchDesigner. A complex network of operators was built to generate a point cloud of a flower model, combined with particle dispersal behaviors and dynamic rendering. This piece establishes the baseline system for further variations in the series.
+            </p>
+        </div>
+    </div>
+
+    <!-- 底部：Gallery区 -->
+    <div class="gallery-section">
+        <!-- Gallery小视频列表，稍后JS填充 -->
+    </div>
+
+</main>
+
+<script src="script4.js"></script>
+</body>
+</html>

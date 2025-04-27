@@ -1,0 +1,129 @@
+/* Reset基础 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Arial', sans-serif;
+    color: #cccccc;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    color: #66FCF1;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #66FCF1, 0 0 20px #66FCF1;
+}
+
+/* Main Section */
+.main-section {
+    display: flex;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 0 20px;
+    align-items: flex-start;
+}
+
+/* 大视频容器 */
+.main-video-container {
+    flex: 2;
+    border: 2px solid #00FFF7;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00FFF7, 0 0 40px #00FFF7;
+    overflow: hidden;
+}
+
+.main-video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* 右边描述区 */
+.description-container {
+    flex: 1;
+    background-color: rgba(0, 255, 247, 0.05);
+    border: 1px solid #00FFF7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00FFF7;
+}
+
+.description-container h2 {
+    color: #00FFF7;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00FFF7;
+}
+
+.description-container h3 {
+    color: #66FCF1;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.description-container p {
+    color: #cccccc;
+    font-size: 0.95em;
+}
+
+/* Gallery区 */
+.gallery-section {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.gallery-section video {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    background-color: #111111;
+    border: 1px solid #00FFF7;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: transform 0.4s, opacity 0.4s, box-shadow 0.4s;
+    box-shadow: 0 0 8px #00FFF7;
+}
+
+.gallery-section video:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 0 20px #00FFF7, 0 0 30px #00FFF7;
+}
+.back-button-container {
+    max-width: 1300px;
+    margin: 20px auto 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.back-button {
+    background: transparent;
+    border: 2px solid #00FFF7;
+    color: #00FFF7;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s;
+    text-shadow: 0 0 8px #00FFF7;
+}
+
+.back-button:hover {
+    background-color: rgba(0, 255, 247, 0.1);
+    box-shadow: 0 0 15px #00FFF7, 0 0 30px #00FFF7;
+    color: #ffffff;
+}
