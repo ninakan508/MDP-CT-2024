@@ -1,82 +1,66 @@
-/* 首页 - 四宫格布局专用 */
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
-
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
-    width: 100%;
-    font-family: 'Space Grotesk', sans-serif;
-    background-color: #0d0d0d;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0a0a0a;
+    color: #eeeeee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 100vh;
-    width: 100vw;
+    grid-template-columns: 1fr 1fr; /* 2列 */
+    grid-template-rows: 1fr 1fr;    /* 2行 */
+    gap: 20px;
+    width: 90vw;
+    height: 90vh;
 }
 
 .grid-item {
     position: relative;
-    background-size: cover;
-    background-position: center;
     overflow: hidden;
     text-decoration: none;
-    color: white;
+    background-color: #111;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    font-weight: 600;
-    transition: background 0.3s, transform 0.3s;
 }
 
-.grid-item::before {
-    content: '';
+.grid-item video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
-    transition: background 0.3s;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(1.2);
+    z-index: 0;
 }
 
-.grid-item:hover::before {
-    background: rgba(0,0,0,0.6);
-}
-
-.grid-item:hover {
-    transform: scale(1.02);
-}
-
-.grid-item h2 {
+.text-container {
     position: relative;
-    z-index: 2;
-    color: #00ffe7;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    transition: color 0.3s;
+    z-index: 1;
+    text-align: center;
+    color: #eeeeee;
+    text-shadow: 0 0 6px #ffffff, 0 0 6px #ffffff;
+    padding: 20px;
 }
 
-.grid-item p {
-    position: absolute;
-    bottom: 20px;
-    width: 90%;
-    font-size: 1rem;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-    color: #e0e0e0;
-    z-index: 2;
+.text-container h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.text-container p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    opacity: 0; /* 默认隐藏 */
+    transition: opacity 0.3s ease;
 }
 
 .grid-item:hover p {
-    opacity: 1;
+    opacity: 1; /* hover时出现描述 */
 }
