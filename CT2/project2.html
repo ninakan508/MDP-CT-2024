@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dream Space: Maze</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_project2.css">
+</head>
+<body>
+
+<div class="project-page">
+    <h1>Dream Space: Maze</h1>
+
+    <p class="description">
+        For this project, I created a dream space centered around a <strong>maze</strong>. Inspired by the movie <em>The Maze Runner</em> and my recurring dreams of being trapped inside mazes, I wanted to design an environment full of mystery, gentle confusion, and playful exploration.
+    </p>
+
+    <h2>Planning & Building</h2>
+
+    <p class="description">
+        I started by sketching a 20x20 orthogonal maze, carefully arranging the pathways to create a balanced and navigable structure.
+    </p>
+
+    <div class="gallery">
+        <div class="image-block">
+            <img src="images/20_by_20_orthogonal_maze.png" alt="Maze Sketch">
+            <p class="image-description">Original maze sketch layout.</p>
+        </div>
+    </div>
+
+    <p class="description">
+        Instead of manually drawing every wall in Unity, I designed a custom terrain brush based on the maze layout. This allowed me to stamp the entire maze onto the terrain surface efficiently.
+    </p>
+
+    <div class="gallery">
+        <div class="image-block">
+            <img src="images/maze_building_empty.png" alt="Maze Base Terrain">
+            <p class="image-description">Maze stamped onto the terrain using a custom brush.</p>
+        </div>
+        <div class="image-block">
+            <img src="images/maze_interior_decoration.png" alt="Maze Interior Decoration">
+            <p class="image-description">Starting to decorate the inside of the maze with natural elements.</p>
+        </div>
+    </div>
+
+    <p class="description">
+        To create a more lively and natural feeling, I manually painted grass across the maze floor. Although it was time-consuming, this process gave the terrain a rich, layered texture.
+    </p>
+
+    <div class="gallery">
+        <div class="image-block">
+            <img src="images/hand_painting_grass.gif" alt="Hand Painting Grass">
+            <p class="image-description">Hand-painting grass onto the terrain.</p>
+        </div>
+        <div class="image-block">
+            <img src="images/grass_painted_overview.gif" alt="Grass Painted Maze Overview">
+            <p class="image-description">Top-down view after grass painting was completed.</p>
+        </div>
+    </div>
+
+    <p class="description">
+        I then constructed the maze entrance, adding small structures and natural decorations to guide the players' first impression.
+    </p>
+
+    <div class="gallery">
+        <div class="image-block">
+            <img src="images/maze_entrance_building.gif" alt="Building Maze Entrance">
+            <p class="image-description">Constructing the maze entrance area.</p>
+        </div>
+        <div class="image-block">
+            <img src="images/tree_planting_overview.gif" alt="Maze with Trees Planted">
+            <p class="image-description">Final maze overview after planting trees to soften the maze boundaries.</p>
+        </div>
+    </div>
+    <h2>Final Showcase</h2>
+
+    <p class="description">
+        Here is a final walkthrough video of the completed maze environment, highlighting the atmosphere, navigation experience, and visual storytelling of the space.
+    </p>
+    
+    <video width="90%" controls poster="images/video_cover.png">
+        <source src="images/final_showcase.MOV" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h2>Challenges & Adaptations</h2>
+
+    <p class="description">
+        One major challenge was texturing the maze walls. Initially, I tried applying a detailed soil texture, but it stretched and distorted badly over the vertical surfaces, ruining the visual consistency. To fix this, I replaced complex textures with a simple brown material and strategically planted trees to mask the terrain edges, creating a softer, more immersive environment.
+    </p>
+
+    <p class="description">
+        This experience taught me that sometimes adapting the strategy — focusing less on textures and more on environmental storytelling — can lead to better results.
+    </p>
+
+    <h2>Experience & Reflection</h2>
+
+    <p class="description">
+        To make the maze explorable, I added a mini First Person Controller in Unity. No complex physics systems were necessary beyond the default collision and gravity provided by Unity. Moving through the maze from a first-person perspective enhanced the sense of immersion and scale.
+    </p>
+
+    <p class="description">
+        The biggest takeaway from this project was learning to adapt my original vision based on technical limitations. In the future, I would love to develop a dynamic maze where paths could shift and change as players explore — creating a truly living, breathing dream space.
+    </p>
+
+    <button id="homeButton" onclick="goHome()">← Back to Home</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
